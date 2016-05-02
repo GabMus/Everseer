@@ -1,0 +1,28 @@
+{
+  "name": "everseer_client",
+  "version": "0.1.0",
+  "description": "A real system monitor for multiple remote machines",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabmus/everseer.git"
+  },
+  "keywords": [
+    "Electron",
+    "everseer",
+    "monitor",
+    "remote"
+  ],
+  "author": "GitHub",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/electron/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.0"
+  }
+}

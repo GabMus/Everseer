@@ -26,7 +26,7 @@ The server app is exclusively compatible with Linux, since most servers run Linu
 *TODO: distribute pre-packaged versions*
 #####Advanced (useful for development)
 
-- Make sure you have `npm` and `electron` installed globally in your system
+- Make sure you have `npm`, `node.js` and `electron` installed globally in your system
 - Clone the repository like this: `git clone https://github.com/GabMus/Everseer`
 - `cd` in the `Everseer/everseer_client/` directory
 - Run `npm start` and the application should be launching correctly

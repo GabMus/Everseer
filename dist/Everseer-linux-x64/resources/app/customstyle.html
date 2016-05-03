@@ -1,0 +1,208 @@
+<!--
+    This file is part of Everseer.
+
+    Everseer is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Everseer is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Everseer.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<style is="custom-style">
+  :root {
+    /*--main-bg-color: #2e2e2e;
+    --main-card-color: #444A5D;
+    --headerbar-color: #437F99;
+    --main-accent-color: #3498DB;*/
+    --text-gray-on-gray: #575757;
+    --rad-yellow: #F4C63D;
+
+    /* Test colors vvv */
+    --main-bg-color: #212121;
+    --main-card-color: #455A64;
+    --headerbar-color: #37474F;
+    --main-accent-color: #EF6C00;
+  }
+
+  body, html {
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Roboto, Arial, sans-serif;
+    -webkit-user-select: none;
+    background-color: var(--main-bg-color);
+  }
+
+  paper-scroll-header-panel {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  paper-scroll-header-panel .content {
+    padding: 8px;
+  }
+
+  #headerbar {
+    --paper-toolbar-height: 48px;
+    --paper-toolbar-sm-height: 48px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: var(--headerbar-color);
+    box-shadow: 0 1px 10px rgba(0,0,0,.5);
+    -webkit-app-region: drag;
+  }
+
+  #headerbar .title {
+    margin-left: 6px;
+  }
+
+  paper-dialog .buttons {
+    color: white;
+  }
+
+  .dialogTitle {
+    font-size: 18pt;
+  }
+
+  paper-dialog {
+      padding: 24px;
+      z-index: 2;
+      background-color: var(--main-card-color);
+      color: white;
+      overflow: auto;
+  }
+
+  .newMachineField {
+      --paper-input-container-input-color: white;
+      --paper-input-container-color: white;
+      --paper-input-container-focus-color: var(--rad-yellow);
+  }
+
+  #confirmAddMachineButton {
+        color: var(--rad-yellow);
+        --paper-button-ink-color: var(--rad-yellow);
+  }
+
+  .removeButton {
+    color: red;
+    --paper-button-ink-color: red;
+  }
+
+  .sshButton {
+    color: var(--rad-yellow);
+    --paper-button-ink-color: var(--rad-yellow);
+  }
+
+  .card-actions {
+    border-top: 1px solid rgba(0,0,0,0.15);
+  }
+
+  #confirmRemoveMachineButton {
+      color: red;
+      --paper-button-ink-color: red;
+  }
+
+  .winbuttons {
+    -webkit-app-region: no-drag;
+  }
+
+  .removeMachButton {
+
+  }
+
+  .decorbtn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .fabspacer {
+    margin-bottom: 82px;
+  }
+
+  .plotbox {
+    /*width: 300px;*/
+    margin-bottom: -10px;
+  }
+
+  .ct-line {
+    stroke-width: 2px;
+  }
+
+  .flex-wrap {
+    @apply(--layout-horizontal);
+    @apply(--layout-wrap);
+    width: 100%;
+  }
+
+  .hbox {
+    @apply(--layout-horizontal);
+    @apply(--layout-center);
+    padding: 0 6px 6px 6px;
+  }
+
+  .flexchild {
+    @apply(--layout-flex);
+  }
+
+  .machineCard {
+    width: 330px;
+    /*margin: 12px 12px 12px 12px;*/
+    background-color: var(--main-card-color);
+    color: white;
+    --paper-card-header-color: white;
+    @apply(--layout-vertical);
+  }
+
+  .machineCard iron-icon {
+    margin: 6px 6px 6px 6px;
+  }
+
+  .machineCardContainer {
+      position: relative;
+      width: 330px;
+      margin: 12px 12px 12px 12px;
+      background-color: rgba(0,0,0,0);
+      color: white;
+  }
+
+  .memorybar {
+    @apply(--layout-flex);
+    margin: 0 0 0 5px;
+  }
+
+  .memorylabel {
+    font-family: Roboto Mono, Courier, monospace;
+    color: white;
+    font-size: 9pt;
+    margin: 0 5px 0 5px;
+  }
+
+  .addMachineFab {
+    position: fixed;
+    bottom: 12px;
+    right: 26px;
+    --paper-fab-background: var(--main-accent-color);
+    --paper-fab-keyboard-focus-background: var(--main-accent-color);
+  }
+
+  .beginMsg {
+    font-size: 16pt;
+    font-weight: bold;
+    color: var(--text-gray-on-gray);
+    display: block;
+    text-align: center;
+  }
+</style>

@@ -1,11 +1,17 @@
 <style is="custom-style">
   :root {
-    --main-bg-color: #2e2e2e;
+    /*--main-bg-color: #2e2e2e;
     --main-card-color: #444A5D;
     --headerbar-color: #437F99;
-    --main-accent-color: #3498DB;
+    --main-accent-color: #3498DB;*/
     --text-gray-on-gray: #575757;
     --rad-yellow: #F4C63D;
+
+    /* Test colors vvv */
+    --main-bg-color: #212121;
+    --main-card-color: #455A64;
+    --headerbar-color: #37474F;
+    --main-accent-color: #EF6C00;
   }
 
   body, html {
@@ -67,12 +73,6 @@
   #confirmAddMachineButton {
         color: var(--rad-yellow);
         --paper-button-ink-color: var(--rad-yellow);
-  }
-
-  .removeIButton {
-      position: absolute;
-      right: 8px;
-      top: 8px;
   }
 
   .removeButton {
@@ -143,6 +143,10 @@
     color: white;
     --paper-card-header-color: white;
     @apply(--layout-vertical);
+  }
+
+  .machineCard iron-icon {
+    margin: 6px 6px 6px 6px;
   }
 
   .machineCardContainer {

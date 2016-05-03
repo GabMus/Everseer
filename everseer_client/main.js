@@ -29,7 +29,7 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, frame: false, minWidth: 390, minHeight: 200, title: "Everseer"});
+  mainWindow = new BrowserWindow({width: 800, height: 600, frame: false, minWidth: 390, minHeight: 200, title: "Everseer", icon: __dirname + '/icon.png'});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');

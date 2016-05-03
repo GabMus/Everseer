@@ -19,9 +19,9 @@
   "author": "GitHub",
   "license": "GPLv3",
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/GabMus/Everseer"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "homepage": "https://github.com/GabMus/Everseer",
   "devDependencies": {
     "electron-prebuilt": "^0.37.0"
   }

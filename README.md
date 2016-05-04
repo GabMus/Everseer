@@ -34,9 +34,16 @@ The Everseer server is built using **Django**.
 The server app is exclusively compatible with Linux, since most servers run Linux anyway this shouldn't be a problem. If you need to make the server app compatible with other operating systems, all you have to do is edit the `/everseer_server/monitorapi/sysmon.py` file and adapt the system calls to your target system.
 
 ##Installation
-####Client
+###Client
 
-*TODO: distribute pre-packaged versions*
+####Arch Linux
+
+Install the `everseer-client-git` package from the **AUR** ([Link](https://aur.archlinux.org/packages/everseer-client-git))
+
+####Other platforms
+
+Download the pre-packaged release for your platform (if it's supported) from the [Releases page](https://github.com/GabMus/Everseer/releases).
+
 #####Advanced (useful for development)
 
 - Make sure you have `npm`, `node.js` and `electron` installed globally in your system
@@ -44,7 +51,7 @@ The server app is exclusively compatible with Linux, since most servers run Linu
 - `cd` in the `Everseer/everseer_client/` directory
 - Run `npm start` and the application should be launching correctly
 
-####Server
+###Server
 
 - Make sure you have `django` installed (best to install it from `pip`; depending on your distribution the package name could be `python-django` or similar)
 - Use your favourite web server to deploy the django app (Apache and nginx are both fine; I won't explain how to deploy the django app myself, since there are many tutorials online, including the django documentation itself)

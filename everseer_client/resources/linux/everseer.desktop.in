@@ -7,3 +7,4 @@ Icon=<%= iconPath %>
 Type=Application
 StartupNotify=true
 Categories=Utility;
+StartupWMClass=everseer_client

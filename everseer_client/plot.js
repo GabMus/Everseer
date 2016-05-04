@@ -20,6 +20,9 @@ var $ = require('./bower_components/jquery/dist/jquery.min.js');
 var ProgressBar = require('./bower_components/progressbar.js/dist/progressbar.min.js');
 var Sortable = require('./bower_components/sortable-otherlevels/Sortable.min.js')
 
+var remote = require('remote');
+var configFilePath=remote.app.getPath('appData')+"/everseer-client.json";
+
 const fs = require('fs');
 
 var config;
@@ -237,10 +240,10 @@ function Plot(url_, key_, divclass_, user_) {
 };
 
 function readConfig() {
-	fs.readFile(__dirname+'/config.json', 'utf-8', function(err, data) {
+	fs.readFile(configFilePath, 'utf-8', function(err, data) {
 	  if (err || data == null || data=="") {
-			//first start, create config.json file
-	    fs.writeFile(__dirname+'/config.json', '{\n"machines" : [\n]\n}');
+			//first start, create config file
+	    fs.writeFile(configFilePath, '{\n"machines" : [\n]\n}');
 	    //console.log(err);
 	  }
 	  else {

@@ -14,8 +14,6 @@
  *    You should have received a copy of the GNU General Public License
  *    along with Everseer.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-var remote = require('remote');
 var exec=require('child_process').exec;
 
 document.getElementById("min-btn").addEventListener("click", function (e) {
@@ -34,7 +32,7 @@ document.getElementById("max-btn").addEventListener("click", function (e) {
 });
 
 document.getElementById("close-btn").addEventListener("click", function (e) {
-     fs.writeFileSync(__dirname+'/config.json', listToJsonstr(machinesPlots)); //before exiting write new config
+     fs.writeFileSync(configFilePath, listToJsonstr(machinesPlots)); //before exiting write new config
      var window = remote.getCurrentWindow();
      window.close();
 });

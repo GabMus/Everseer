@@ -54,7 +54,7 @@ Download the pre-packaged release for your platform (if it's supported) from the
 
 ####Advanced
 
-- Make sure you have `npm` and `node.js` installed globally in your system
+- Make sure you have `npm`,  `node.js` and `pm2` installed globally in your system
 - Clone the repository like this: `git clone https://github.com/GabMus/Everseer`
 - `cd` in the `/everseer_server/` directory
 - Change the API key in `/everseer_server/routes/index.js` at line 22; the suggested way to easily generate an API key is using the output from `head -n 30 /dev/urandom | sha512sum`

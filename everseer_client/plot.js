@@ -132,7 +132,7 @@ function Plot(url_, key_, divclass_, user_) {
 
 
 	         		new Chartist.Line('#'+_this.divclass, {series: _this.cpuusages}, _this.chartoptions);
-	         		setTimeout(function() {_this.getNewData();}, 1000);
+	         		setTimeout(function() {_this.getNewData();}, 50);
 				}
 			);
 		}

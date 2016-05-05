@@ -18,7 +18,6 @@
 exports.sysmon=sysmon();
 //pm2
 var exec=require('child_process').exec;
-var os=require('os');
 
 function sysmon() {
   return {

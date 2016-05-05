@@ -29,9 +29,8 @@ As I don't have any Windows or OS X machines, nor I plan to get any in the futur
 ###Server
 #####`/everseer_server`
 
-The Everseer server is built using **Django**.
-
-The server app is exclusively compatible with Linux, since most servers run Linux anyway this shouldn't be a problem. If you need to make the server app compatible with other operating systems, all you have to do is edit the `/everseer_server/monitorapi/sysmon.py` file and adapt the system calls to your target system.
+The server app is exclusively compatible with Linux, since most servers run Linux anyway this shouldn't be a problem. If you need to make the server app compatible with other operating systems, you'll have to edit the server files by yourself.
+*Note that the license not only allows this, but also encourages you to. Go ahead, fork it!*
 
 ##Installation
 ###Client
@@ -44,15 +43,19 @@ Install the `everseer-client-git` package from the **AUR** ([Link](https://aur.a
 
 Download the pre-packaged release for your platform (if it's supported) from the [Releases page](https://github.com/GabMus/Everseer/releases).
 
-#####Advanced (useful for development)
+####Advanced (useful for development)
 
-- Make sure you have `npm`, `node.js` and `electron` installed globally in your system
+- Make sure you have `npm` and `node.js` installed globally in your system
 - Clone the repository like this: `git clone https://github.com/GabMus/Everseer`
-- `cd` in the `Everseer/everseer_client/` directory
+- `cd` in the `/everseer_client/` directory
 - Run `npm start` and the application should be launching correctly
 
 ###Server
 
-- Make sure you have `django` installed (best to install it from `pip`; depending on your distribution the package name could be `python-django` or similar)
-- Use your favourite web server to deploy the django app (Apache and nginx are both fine; I won't explain how to deploy the django app myself, since there are many tutorials online, including the django documentation itself)
-- Change the API key in `Everseer/everseer_server/monitorapi/views.py`; the suggested way to easily generate an API key is using the output from `head -n 30 /dev/urandom | sha512sum`
+####Advanced
+
+- Make sure you have `npm` and `node.js` installed globally in your system
+- Clone the repository like this: `git clone https://github.com/GabMus/Everseer`
+- `cd` in the `/everseer_server/` directory
+- Change the API key in `/everseer_server/routes/index.js` at line 22; the suggested way to easily generate an API key is using the output from `head -n 30 /dev/urandom | sha512sum`
+- Run `npm start` and the http server should run on the port 4444 (you can change the port editing the `/everseer-server/bin/www` file, at line 15)

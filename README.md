@@ -52,6 +52,14 @@ Download the pre-packaged release for your platform (if it's supported) from the
 
 ###Server
 
+####Arch Linux
+
+Install the `everseer-server-git` package from the **AUR** ([Link](https://aur.archlinux.org/packages/everseer-server-git))
+
+####Other platforms
+
+Download the pre-packaged release for your platform (if it's supported) from the [Releases page](https://github.com/GabMus/Everseer/releases).
+
 ####Advanced
 
 - Make sure you have `npm`,  `node.js` and `pm2` installed globally in your system

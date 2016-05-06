@@ -20,7 +20,7 @@ var router = express.Router();
 var sysmon= require('./sysmon').sysmon;
 var read=require('fs').readFileSync;
 
-var APIKEY=read('./routes/APIKEY');
+var APIKEY=read('APIKEY').toString().trim();
 /* GET home page. */
 router.get('/:key', function(req, res, next) {
   if (req.params.key==APIKEY)

@@ -22,7 +22,7 @@ var exec=require('child_process').exec;
 function sysmon() {
   return {
     getStats: function(callback) {
- 		exec('python3 ./routes/__pycache__/sysmon.cpython-35.pyc',
+ 		exec('python3 '+__dirname+'/sysmon.py',
  			function (err, stdout, stderr) {
  				callback(stdout);
  			}

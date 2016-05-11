@@ -69,11 +69,11 @@ function Plot(url_, key_, divclass_, user_) {
 		checkEmpty();
 	}
 
-	this.remove = function() {
+	this.remove = function(preserve) {
 		_this.active=false;
 		_this.memorybar.destroy();
 		_this.newCardContainer.remove();
-		machinesPlots.splice(_this.isMe(), 1);
+		if (preserve == null || preserve == false) machinesPlots.splice(_this.isMe(), 1);
 		checkEmpty();
 	};
 
@@ -275,16 +275,19 @@ function initMachines() {
 	}
 }
 
+function reloadMachines() {
+  for (let i=0; i<machinesPlots.length; i++) {
+    machinesPlots[i].remove(true);
+		machinesPlots[i].begin();
+	}
+}
+
 function checkEmpty() {
 	if (machinesPlots == null || machinesPlots.length==0) {
-		let beginMessage=document.createElement('span');
-		beginMessage.classList.add('beginMsg');
-		beginMessage.innerHTML="There are no machines configured.<br />Press the <iron-icon icon='av:add-to-queue'></iron-icon> button to add a new one.";
-		$(".content")[0].appendChild(beginMessage);
+		$('#beginMsg')[0].className="";
 	}
 	else {
-		let torm =$(".beginMsg")[0];
-		if (torm != null) torm.remove();
+		$('#beginMsg')[0].className="beginMsgHidden";
 		//initMachines();
 	}
 }
@@ -331,3 +334,5 @@ var sortable = Sortable.create(el, {
         // + indexes from onEnd
     }*/
 });
+
+var popover=$("#popover")[0];

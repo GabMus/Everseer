@@ -58,6 +58,8 @@
         <span class="title">Everseer</span>
         <span class="flex"></span>
         <div class="winbuttons">
+          <paper-icon-button class="decorbtn" icon="refresh" id="reloadmachines-btn"></paper-icon-button>
+          <span style="width: 10px;"></span>
           <paper-icon-button class="decorbtn" icon="remove" id="min-btn"></paper-icon-button>
           <paper-icon-button class="decorbtn" icon="fullscreen" id="max-btn"></paper-icon-button>
           <paper-icon-button class="decorbtn" icon="close" id="close-btn"></paper-icon-button>
@@ -94,6 +96,8 @@
 
           <paper-fab class="addMachineFab" icon="av:add-to-queue" onclick="document.getElementById('addMachineDialog').open()"></paper-fab>
           <div class="fabspacer"></div>
+
+          <span id="beginMsg">There are no machines configured.<br />Press the <iron-icon icon='av:add-to-queue'></iron-icon> button to add a new one.</span>
         </div>
     </paper-scroll-header-panel>
 

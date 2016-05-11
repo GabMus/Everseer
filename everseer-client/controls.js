@@ -21,6 +21,10 @@ document.getElementById("min-btn").addEventListener("click", function (e) {
      window.minimize();
 });
 
+document.getElementById("reloadmachines-btn").addEventListener("click", function (e) {
+     reloadMachines();
+});
+
 document.getElementById("max-btn").addEventListener("click", function (e) {
      var window = remote.getCurrentWindow();
      if (window.isMaximized()) {
@@ -32,7 +36,7 @@ document.getElementById("max-btn").addEventListener("click", function (e) {
 });
 
 document.getElementById("close-btn").addEventListener("click", function (e) {
-     fs.writeFileSync(configFilePath, listToJsonstr(machinesPlots)); //before exiting write new config
+     //fs.writeFileSync(configFilePath, listToJsonstr(machinesPlots)); //before exiting write new config
      var window = remote.getCurrentWindow();
      window.close();
 });
@@ -40,6 +44,7 @@ document.getElementById("close-btn").addEventListener("click", function (e) {
 document.getElementById("confirmRemoveMachineButton").addEventListener("click", function (e) {
      plotToDel.remove();
      $('#removeMachineDialog')[0].close();
+     fs.writeFile(configFilePath, listToJsonstr(machinesPlots));
 });
 
 document.getElementById("confirmAddMachineButton").addEventListener("click", function (e) {
@@ -60,6 +65,7 @@ document.getElementById("confirmAddMachineButton").addEventListener("click", fun
              newMachine.name=$('.newMachineField')[0].value,
              newMachine.user=$('.newMachineField')[3].value
          );
+         fs.writeFileSync(configFilePath, listToJsonstr(machinesPlots));
          for (let i=0; i< $('.newMachineField').length; i++) {
              $('.newMachineField')[i].value="";
          }

@@ -17,14 +17,8 @@
 
 <style is="custom-style">
   :root {
-    /*--main-bg-color: #2e2e2e;
-    --main-card-color: #444A5D;
-    --headerbar-color: #437F99;
-    --main-accent-color: #3498DB;*/
     --text-gray-on-gray: #575757;
     --rad-yellow: #F4C63D;
-
-    /* Test colors vvv */
     --main-bg-color: #212121;
     --main-card-color: #455A64;
     --headerbar-color: #37474F;
@@ -198,11 +192,15 @@
     --paper-fab-keyboard-focus-background: var(--main-accent-color);
   }
 
-  .beginMsg {
+  #beginMsg {
     font-size: 16pt;
     font-weight: bold;
     color: var(--text-gray-on-gray);
     display: block;
     text-align: center;
   }
-</style>
+
+  .beginMsgHidden {
+    display: none !important;
+  }
+  </style>
